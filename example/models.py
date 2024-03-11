@@ -22,3 +22,16 @@ class Resource(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+    
+
+from django.contrib.auth.models import User
+from django.db import models
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(to=User, on_delete=models.CASCADE)
+    bio = models.TextField()
+    birth_date = models.DateField()
+
+    def __str__(self):
+        return f'{self.user.username} profile'
