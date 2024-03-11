@@ -72,5 +72,5 @@ class MovieSerializer(serializers.ModelSerialzer):
           model = User
           fields = '__all__'
 
-    def get_full_name(self, obj):
-        return f'{obj.first_name} {obj.last_name}'
+        def get_full_name(self, obj):
+            return f'{obj.first_name} {obj.last_name}'
